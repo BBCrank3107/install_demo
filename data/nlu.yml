@@ -89,3 +89,28 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+################################################
+###################Update#######################
+
+- intent: ask_weather
+  examples: |
+    - what's the weather like?
+    - tell me the weather
+    - how is the weather today?
+    - is it sunny outside?
+    - do I need an umbrella?
+
+- intent: ask_time
+  examples: |
+    - what time is it?
+    - tell me the time
+    - current time please
+    - can you tell me the time?
+
+- intent: ask_date
+  examples: |
+    - what's the date today?
+    - tell me the date
+    - today's date please
+    - can you tell me the date?

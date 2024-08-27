@@ -89,3 +89,28 @@ stories:
       are you a bot?
     intent: bot_challenge
   - action: utter_iamabot
+
+#########################################
+################UPDATE###################
+
+- story: ask about weather
+  steps:
+  - user: |
+      what's the weather like?
+    intent: ask_weather
+  - action: utter_ask_weather
+
+- story: ask about time
+  steps:
+  - user: |
+      what time is it?
+    intent: ask_time
+  - action: action_tell_time
+
+- story: ask about date
+  steps:
+  - user: |
+      What is the date today?
+    intent: ask_date
+  - action: action_tell_date
+

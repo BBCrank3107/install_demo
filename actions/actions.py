@@ -25,3 +25,28 @@
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
+
+from rasa_sdk import Action
+from rasa_sdk.events import SlotSet
+import datetime
+
+class ActionTellTime(Action):
+
+    def name(self) -> str:
+        return "action_tell_time"
+
+    def run(self, dispatcher, tracker, domain):
+        now = datetime.datetime.now()
+        current_time = now.strftime("%H:%M:%S")
+        dispatcher.utter_message(text=f"The current time is {current_time}")
+        return []
+
+class ActionTellDate(Action):
+
+    def name(self) -> str:
+        return "action_tell_date"
+
+    def run(self, dispatcher, tracker, domain):
+        today = datetime.datetime.today().strftime('%Y-%m-%d')
+        dispatcher.utter_message(text=f"Today's date is {today}")
+        return []

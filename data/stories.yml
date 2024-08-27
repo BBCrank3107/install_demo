@@ -28,3 +28,22 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+#######################################
+##############UPDATE###################
+
+- story: ask about weather
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_weather
+
+- story: ask about time
+  steps:
+  - intent: ask_time
+  - action: action_tell_time
+
+- story: ask about date
+  steps:
+  - intent: ask_date
+  - action: action_tell_date
+

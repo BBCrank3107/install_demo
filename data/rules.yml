@@ -11,3 +11,21 @@ rules:
   steps:
   - intent: bot_challenge
   - action: utter_iamabot
+
+######################################
+############UPDATE####################
+
+- rule: Respond to weather question
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_weather
+
+- rule: Respond to time question
+  steps:
+  - intent: ask_time
+  - action: action_tell_time
+
+- rule: Respond to date question
+  steps:
+  - intent: ask_date
+  - action: action_tell_date
